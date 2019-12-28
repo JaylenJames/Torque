@@ -71,6 +71,14 @@ func jointTorque(angularAcceleration: Float, angle: Float, nueroMuscle: Float = 
     return torque
 }
 
+
+func jointTorqueTwo(angularAcceleration_1: Float, angularAcceleration_2: Float = 1.0, length_k: Float, length_f:Float, mass: Float = 1.0) -> Float{
+    var torque2 = ((mass * angularAcceleration_1)*(length_k*length_k))  - ((mass * angularAcceleration_2) * (length_f*length_f))
+    //measure distance from imu follow up
+    return torque2
+}
+
+
 // 
 
 func computeScore (emgArray: Double) -> [Double] {
