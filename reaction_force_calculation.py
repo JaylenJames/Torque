@@ -8,9 +8,15 @@ Calculation of ground reaction force on the foot.
 @author: JaylenJames
 """
 import pandas as pd
+import numpy as np
 
-squat_data = pd.read_csv()
+
 #Import CSV as a datafrome
+int_list = list(range(1,45))
+int_list_str = [str(i) for i in int_list]
+
+squat_data = pd.read_csv("JameJ04_M Trial 1 squat.csv", names =  int_list_str) #int_list)
+
 
 #Remove rows that aren;t neeted
 
