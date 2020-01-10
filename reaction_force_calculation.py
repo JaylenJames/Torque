@@ -15,11 +15,12 @@ import numpy as np
 int_list = list(range(1,45))
 int_list_str = [str(i) for i in int_list]
 
-squat_data = pd.read_csv("JameJ04_M Trial 1 squat.csv", names =  int_list_str) #int_list)
+int_list_2 = list(range(0,29))
+squat_data_df = pd.read_csv("JameJ04_M Trial 1 squat.csv", names =  int_list_str) #int_list)
 
 
-#Remove rows that aren;t neeted
-
+#Remove rows that aren't neeted
+squat_data_drop_df = squat_data_df.drop(axis = 0, index = int_list_2)
 
 #Determine number of cells that are non-zero
 
